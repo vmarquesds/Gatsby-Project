@@ -1,7 +1,18 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "test-1",
+    title: 'Test Number 1',
+    author: "Vitor Marques",
+    site: 'test-1',
+    description: 'This is a test gatsby website.'
   },
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+  ],
 };
